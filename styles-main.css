@@ -18,8 +18,13 @@ h1 {
 }
 
 h2 {
+  flex: none;
   text-align:center ;
   font: normal bold 36px calligra, verdana ;
+  background: #88FFFF;
+  border: 6px solid #cdcdcd;
+  border-radius: 24%;
+  padding: 8px;
 }
 
 h3 { font: normal bold 24px calligra, verdana ; }
@@ -83,7 +88,7 @@ img { position:relative ; }
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-content: flex-start;
+  align-items: center; /*flex-start;*/
   gap: 20px;
   /*max-width: 400px; /* Maxwidth for bigscreens */
 }
