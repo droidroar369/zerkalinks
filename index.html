@@ -21,14 +21,7 @@
 
 </head>
 <body>
-
-<script type="text/javascript">
-//Prevents a default click
-function prev_default(e) {
-  e.preventDefault();
-  alert("This page currenlty does not exist!!!");
-}
-</script>
+<script type="text/javascript" src="functionalities.js"></script>
 
 <h1>ZerkaLinks</h1>
 
@@ -106,15 +99,16 @@ function prev_default(e) {
   </div>
   <!--Bitcoin-->
   <div class="link-box">
-    <a href="#" onclick="prev_default(event);"><i class="fab fa-bitcoin"></i>Wallet address</a>
+    <a href="#" onclick="copy_text(event);"><i class="fab fa-bitcoin"></i><span class="big-text">Wallet address</span></a>
   </div>
   <!--Ethereum-->
   <div class="link-box">
-    <a href="#" onclick="prev_default(event);"><i class="fab fa-ethereum"></i>Wallet address</a>
+    <a href="#" onclick="copy_text(event);"><i class="fab fa-ethereum"></i><span class="big-text">Wallet address</span></a>
   </div>
   <!--Toncoin-->
   <div class="link-box">
-    <a href="#" onclick="prev_default(event);"><i class="svg-fa svg-toncoin"></i>Wallet address</a>
+    <a href="#" onclick="copy_text(event);"><i class="svg-fa svg-toncoin"></i>
+    <span class="big-text">UQBtL_5x7rpH4fbhQQu2AIAelAPGnXUzXfNo1Os8P-u1cFSx</span></a>
   </div>
 </div>
 
