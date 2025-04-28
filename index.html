@@ -18,11 +18,20 @@
 <!--Styles-->
 <link rel="stylesheet" href="styles-main.css" type="text/css">
 
+<!--A-frame-->
 <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.0.0/dist/aframe-extras.min.js"></script>
 
+<!--Style for the A-frame avatar-->
 <style>
-    a-scene {width: 300px; height: 400px; margin-top: -8vw; margin-bottom: -5vw;}
+#avatar-frame {
+  max-width: 300px;
+  max-height: 400px;
+  width: 45vw;
+  height: 60vw;
+  margin-top: -10vw;
+  margin-bottom: -8vw;
+}
 </style>
 
 </head>
@@ -31,16 +40,21 @@
 
 <h1>ZerkaLinks</h1>
 
-<a-scene embedded>
+<!--Avatar: replace the GLB file by your asset, and give it an appropiate id-->
+<a-scene id="avatar-frame" embedded>
     <a-assets>
       <a-asset-item id="droid-roar-face" src="droid-roar-face-rotating.glb" animation-mixer></a-asset-item>
     </a-assets>
     
-    
-    <a-entity id="rig" position="0 0.4 3.0" rotation="-8 0 0">
-      <a-entity camera look-controls wasd-controls ></a-entity>
+    <!--Camera-->
+    <a-entity id="rig-cam" position="0 0.4 3.0" rotation="-8 0 0">
+      <a-entity camera look-controls="magicWindowTrackingEnabled: false;" wasd-controls ></a-entity>
     </a-entity>
+    <!--Light-->
+      <a-light type="directional" color="#ffffff" intensity="1.5" position="0 0.8 3.2"></a-light>
+    <!--Model-->
     <a-entity gltf-model="#droid-roar-face" animation-mixer></a-entity>
+    <!--Environment-->
     <a-sky color="#4e4ed8"></a-sky>
 </a-scene>
 
